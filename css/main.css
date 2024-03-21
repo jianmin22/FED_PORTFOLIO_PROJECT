@@ -1,0 +1,231 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   CA2 Assignment
+   
+   Visual Style Sheet for Career Propects html Pages
+   Author: Soh Jian Min
+   Date: 04 August 2022
+   
+   Filename: main.css
+
+*/
+
+/* The images and icons in this file are all taken from https://www.pngwing.com and https://coolors.co/ */
+
+/* set Background image*/
+.main-bg {
+    background-image: url(../Images/bgimg.png);
+}
+
+/* Set Header background and text shadow */
+header h1#mcs {
+    background-image: url(../Images/Logo1.png);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0),
+        2px 2px 4px rgb(255, 255, 255);
+}
+
+/* set text shadow black */
+.text-shadow-black {
+    text-shadow: 2px 2px 2px rgb(0, 0, 0),
+        3px 3px 5px rgb(255, 255, 255);
+}
+
+/* set text shadow white */
+.text-shadow-white {
+    text-shadow: 2px 2px 2px white,
+        3px 3px 5px rgb(255, 255, 255);
+}
+
+/* Set border */
+.border-main {
+    border: 1px solid black;
+}
+
+/* set index blockquote image */
+div#blockquote {
+    background-image: url(../Images/blockquotebg.png);
+}
+
+/* figure caption for experience sp */
+figure figcaption {
+    background-color: rgb(224, 199, 165);
+}
+
+
+/* Gradient for h1 timeline text */
+h2#timelineh2 {
+    background: linear-gradient(45deg, rgb(232, 211, 186), rgb(225, 174, 124));
+    text-shadow: 2px 2px 2px rgb(0, 0, 0),
+        3px 3px 5px rgb(255, 255, 255);
+}
+
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline {
+    position: relative;
+}
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    background: linear-gradient(rgb(254, 133, 124), rgb(241, 159, 153), rgb(241, 209, 209));
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.timeline {
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -11px;
+    background-color: white;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container for timeline to the left */
+.left {
+    padding: 0px 40px 20px 0px;
+    left: 0;
+}
+
+/* Place the container for timeline to the right */
+.right {
+    padding: 0px 0px 20px 40px;
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    position: absolute;
+    top: 18px;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    position: absolute;
+    top: 18px;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -14px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+
+    /* Place the timelime to the left */
+    .main-timeline::after {
+        left: 31px;
+    }
+
+    /* Full-width containers */
+    .timeline {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .timeline::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left::after,
+    .right::after {
+        left: 18px;
+    }
+
+    .left::before {
+        right: auto;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
+}
+
+/* card border */
+.card {
+    border: solid rgb(225, 187, 136);
+    border-width: 2px;
+}
+
+
+/* set table head background */
+tr#tablehead {
+    background: url(../Images/tablehead.png);
+}
+
+/* set table footer background */
+tr#tablefooter {
+    background: url(../Images/tablefoot.png);
+}
+
+/* set table border  */
+table#border {
+    border: 3px solid black;
+}
+
+tr.border-table {
+    border: 1px solid black;
+}
+
+/* comment box feedback */
+div#comments {
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: rgba(206, 205, 204, 0.4) 0px 0px 20px 10px;
+}
+
+/* Validation Styles */
+input#name:focus:valid,
+input#email:focus:valid,
+input#tel:focus:valid {
+    background: url(../Images/valid\ icon.png) bottom right/contain no-repeat;
+}
+
+input#name:focus:invalid,
+input#email:focus:invalid,
+input#tel:focus:invalid {
+    background: url(../Images/invalid\ icon.png) bottom right/contain no-repeat;
+}
+
+/* secsch award pic gallery grad */
+.sec-pic-bg {
+    background: linear-gradient(45deg, rgb(239, 179, 152) 25%, rgb(255, 255, 255) 75%);
+}

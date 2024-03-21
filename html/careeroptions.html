@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   CA2 Assignment
+   
+   Career Propects Career Options Page
+   Author: Soh Jian Min
+   Date: 04 August 2022
+
+   Filename: careeroptions.html
+
+-->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- Javascripts   Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <!-- javascript link -->
+    <script src="../JavaScipt/table.js" defer></script>
+    <!-- CSS link -->
+    <link href="../css/main.css" rel="stylesheet" />
+    <title>My Career Propects</title>
+</head>
+
+<body>
+
+    <header>
+        <h1 class=" text-center p-4" id="mcs">My Career Propects</h1>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand border border-dark p-2" href="#">Links</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Introduction</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                My Experience
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="experienceinsp.html">Experience In SP</a></li>
+                                <li><a class="dropdown-item" aria-current="page" href="lifeExperience.html">Life
+                                        Experience</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="careeroptions.html">Career Options</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="feedback.html">Feedback</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-bg">
+        <div class="container pt-3 pb-4">
+            <h1 class="text-center text-shadow-white">Career Options</h1>
+            <div id="table1" class="table-responsive mt-3"></div>
+            <!--insert table with id-->
+        </div>
+    </div>
+
+    <div class="container-fluid p-2" id="footer">
+        <p class="text-center">Contact Me: <br>
+            <a href="mailto:jianmin.evgrcy@gmail.com">personal Email</a> &#8226; <a href="tell:+6590519179">Call:
+                (65)90519179</a> &#8226; <a href="mailto:jiannmin.22@ichat.sp.edu.sg"> My School Email </a>
+        </p>
+    </div>
+</body>
+
+</html>
